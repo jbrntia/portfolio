@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jerick Barnatia Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --container:1100px;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; }
+    body {
+      background: linear-gradient(180deg, #071028 0%, #081224 60%);
+      color: #e6eef8; -webkit-font-smoothing: antialiased;
+      line-height: 1.45; padding: 32px 20px; display: flex; justify-content: center;
+    }
+    .wrap { width: 100%; max-width: var(--container); }
+
+    header {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px;
+    }
+    .brand { display: flex; flex-direction: column; }
+    .brand-name { font-weight: 800; font-size: 20px; }
+    .brand-sub { font-size: 12px; color: var(--muted); }
+
+    nav { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+    nav a { color: var(--muted); text-decoration: none; font-weight: 600; transition: 0.2s; }
+    nav a:hover { color: white; }
+    .cta {
+      background: linear-gradient(90deg, var(--accent), #06b6d4);
+      padding: 10px 14px; border-radius: 12px; color: white;
+      text-decoration: none; font-weight: 700;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius: var(--radius); padding: 34px;
+      display: grid; grid-template-columns: 1fr 360px; gap: 24px;
+      align-items: center; margin-bottom: 22px;
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+    }
+    .intro h1 { margin: 0 0 8px; font-size: 28px; }
+    .intro p { margin: 0 0 18px; color: var(--muted); }
+    .links { display: flex; gap: 10px; flex-wrap: wrap; }
+    .pill { background: var(--glass); padding: 8px 12px; border-radius: 999px; color: var(--muted); font-weight: 600; text-decoration: none; transition: 0.2s; }
+    .pill:hover { background: var(--accent); color: white; }
+
+    .profile-card {
+      background: linear-gradient(180deg, #071022, #08122a);
+      border-radius: 12px; padding: 18px; text-align: center;
+    }
+    .avatar {
+      width: 120px; height: 120px; border-radius: 18px;
+      margin: 0 auto 12px; background: linear-gradient(135deg, #334155, #0ea5a6);
+      overflow: hidden;
+    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; }
+    .profile-card h3 { margin: 0 0 6px; }
+    .profile-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .section { margin-bottom: 22px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      padding: 16px; border-radius: 12px; min-height: 140px;
+    }
+    .card h4 { margin: 0 0 8px; }
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .skill {
+      background: var(--glass); padding: 8px 10px;
+      border-radius: 10px; font-weight: 600; color: var(--muted);
+    }
+
+    footer { margin-top: 28px; padding: 18px; text-align: center; color: var(--muted); font-size: 13px; }
+
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      nav { display: none; }
+      .grid { grid-template-columns: 1fr; }
+      body { padding: 18px; }
+    }
+
+    .muted { color: var(--muted); }
+    .project-thumb {
+      height: 110px; border-radius: 10px;
+      background: linear-gradient(135deg, #061124, #0b1626);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--muted); font-weight: 700;
+    }
+    .btn {
+      display: inline-block; padding: 8px 12px; border-radius: 10px;
+      text-decoration: none; font-weight: 700;
+    }
+    .btn-outline { border: 1px solid rgba(255,255,255,0.06); color: var(--muted); transition: 0.2s; }
+    .btn-outline:hover { border-color: var(--accent); color: white; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="brand-name">Jerick Barnatia</div>
+        <div class="brand-sub">Full Stack Developer • Django • Flutter • Laravel • Godot</div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Hire Me</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="intro">
+          <p>I am an IT graduate and currently pursuing my Master’s degree in 
+          <strong>Master of Science in Information Technology major in Data Science</strong>. 
+          I am a driven and diligent individual seeking suitable employment at a 
+          well-established organization where I can apply my knowledge and abilities 
+          while contributing to the company’s growth. I also have professional experience 
+          in the academe as a <strong>college instructor</strong>, enhancing my skills in communication, 
+          mentorship, and leadership in the field of technology and education.</p>
+
+          <div class="links">
+            <a class="pill" href="#projects">View Projects</a>
+            <a class="pill" href="#contact">Get in Touch</a>
+            <a class="pill" href="#" onclick="window.open('resume.pdf','_blank')">Download Resume</a>
+          </div>
+          <div style="margin-top:18px;color:var(--muted);font-size:14px">
+            Based in: Philippines • Available for freelance & remote work
+          </div>
+        </div>
+
+        <aside>
+          <div class="profile-card">
+            <div class="avatar">
+              <img src="1C.jpg" alt="Jerick Barnatia Photo">
+            </div>
+            <h3>Jerick Barnatia</h3>
+            <p class="muted">Full Stack Developer — proficient in Django, Python, Flutter, Dart, PHP Laravel, and Godot for gaming. Passionate about UI/UX and building seamless, interactive systems.</p>
+            <div style="margin-top:12px;display:flex;gap:8px;justify-content:center">
+              <a class="btn btn-outline" href="#contact">Email</a>
+              <a class="btn" style="background:linear-gradient(90deg,var(--accent),#06b6d4);color:white" href="#projects">Work</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects" class="section">
+        <h2 style="margin:0 0 12px">Projects and Experiences</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="project-thumb">Capstone Developed</div>
+            <h4 style="margin-top:12px">MONIFIRE: Fire Monitoring System with CCTV Camera and Alert Notification</h4>
+            <p class="muted" style="font-size:14px">A responsive fire monitoring system with alert notifications, built using PHP and Laravel framework.</p>
+          </article>
+
+          <article class="card">
+            <div class="project-thumb">Portfolio Website</div>
+            <h4 style="margin-top:12px">Portfolio Template</h4>
+            <p class="muted" style="font-size:14px">A clean, accessible portfolio built with HTML, CSS, and Flutter web integration for interactive previews.</p>
+          </article>
+
+          <article class="card">
+            <div class="project-thumb">Game Development</div>
+            <h4 style="margin-top:12px">Game App with Godot</h4>
+            <p class="muted" style="font-size:14px">A 2D puzzle game developed using Godot Engine, demonstrating logic, UI, and level design.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="certificates" class="section">
+        <h2 style="margin:0 0 12px">Certificates</h2>
+        <div class="card" style="text-align:center">
+          <img src="C1.png" alt="Certificate of Jerick Barnatia" style="max-width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.4)">
+          <p class="muted" style="margin-top:10px">Certificate of Completion / Achievement</p>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <h2 style="margin:0 0 12px">Skills & Tools</h2>
+        <div class="card">
+          <div class="skills">
+            <div class="skill">Python</div>
+            <div class="skill">Django</div>
+            <div class="skill">Flutter</div>
+            <div class="skill">Dart</div>
+            <div class="skill">PHP</div>
+            <div class="skill">Laravel</div>
+            <div class="skill">Godot</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS / SASS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Figma</div>
+            <div class="skill">Git</div>
+            <div class="skill">Responsive Design</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <h2 style="margin:0 0 12px">Contact</h2>
+        <div class="card" style="display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap">
+          <div style="flex:1;min-width:260px">
+            <p class="muted">Want to collaborate or hire me? Send a message and I'll reply within a few days.</p>
+            <form action="mailto:barnatia.jerickc@gmail.com" method="post" enctype="text/plain">
+              <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+                <input name="Name" placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+                <input name="Email" placeholder="Your email" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit">
+                <textarea name="Message" placeholder="Message" rows="5" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit"></textarea>
+                <button type="submit" class="btn" style="background:linear-gradient(90deg,var(--accent),#06b6d4);color:white">Send Message</button>
+              </div>
+            </form>
+          </div>
+          <div style="width:320px;min-width:220px">
+            <h4 style="margin:0 0 8px">Get in Touch</h4>
+            <p class="muted" style="margin:0 0 8px">Email: <strong>barnatia.jerickc@gmail.com</strong></p>
+            <p class="muted" style="margin:0 0 8px">LinkedIn: 
+              <a href="https://www.linkedin.com/in/barnatia-jerick-c-1432962b5/" 
+                 style="color:var(--accent);text-decoration:none" target="_blank">
+                 linkedin.com/in/barnatia-jerick-c-1432962b5
+              </a>
+            </p>
+            <p class="muted" style="margin:0 0 8px">Phone: <strong>+63 906 019 0351</strong></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Jerick Barnatia
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
